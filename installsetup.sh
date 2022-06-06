@@ -1,23 +1,17 @@
 #!/bin/bash
 
 clear
-echo "          --------------------------------------------------------------------------------------------------------------------------------------------------"
+echo "          ----------------------------------------------------------------------------------------------------------------------------"
 echo -e ""
-echo "          ███████████   ███████████   ███████████   ███████████   ███████████   ██       ██   ███████████       ██          ██   ██          ██   ██████████"
-echo "          ██       ██   ██       ██   ██            ██            ██       ██   ██       ██   ██       ██        ██        ██     ██        ██            ██"
-echo "          ██            ██       ██   ██            ██            ██       ██   ██       ██   ██                  ██      ██       ██      ██            ██"
-echo "          ██            ██       ██   ██            ██            ██       ██   ██       ██   ██                   ██    ██         ██    ██            ██"
-echo "          ██            ██       ██   ██            ██            ██       ██   ██       ██   ██                    ██  ██           ██  ██            ██"
-echo "          ███████████   ███████████   ███████████   ███████████   ██       ██   ███████████   ██                     ████             ████            ██"
-echo "                   ██   ██            ██            ██            ██       ██            ██   ██   ██████            ████              ██            ██"
-echo "                   ██   ██            ██            ██            ██       ██            ██   ██   ██  ██           ██  ██             ██           ██"
-echo "                   ██   ██            ██            ██            ██       ██            ██   ██       ██          ██    ██            ██          ██"
-echo "          ██       ██   ██            ██            ██            ██       ██            ██   ██       ██         ██      ██           ██         ██"
-echo "          ███████████   ██            ███████████   ███████████   ███████████            ██   ███████████   ██   ██        ██          ██         ██████████"
+echo "                                                       ██      ██    ██ ██████"  
+echo "                                                       ██      ██    ██ ██   ██" 
+echo "                                                       ██      ██    ██ ██████"  
+echo "                                                       ██       ██  ██  ██   ██" 
+echo "                                                       ███████   ████   ██████"  
 echo -e ""
-echo "          --------------------------------------------------------------------------------------------------------------------------------------------------"
+echo "          -----------------------------------------------------------------------------------------------------------------------------"
 echo -e ""
-echo "                                                 Quá Trình Cài Đặt XrayR Cho Máy Chủ Của Bạn Đang Diễn Ra !"
+echo "                                       Quá Trình Cài Đặt XrayR Cho Máy Chủ Của Bạn Đang Diễn Ra !"
 echo -e ""
 red='\033[0;31m'
 green='\033[0;32m'
@@ -62,7 +56,7 @@ fi
 echo "  Tiến Trình: ${arch}"
 
 if [ "$(getconf WORD_BIT)" != '32' ] && [ "$(getconf LONG_BIT)" != '64' ] ; then
-    echo "  Phần Mềm Này Không Hỗ Trợ Hệ Thống 32-bit (x86), Vui Lòng Sử Dụng Hệ Thống 64-bit (x86_64), Nếu Phát Hiện Sai, Vui Lòng Liên Hệ ADMIN SPEED4G.XYZ"
+    echo "  Phần Mềm Này Không Hỗ Trợ Hệ Thống 32-bit (x86), Vui Lòng Sử Dụng Hệ Thống 64-bit (x86_64), Nếu Phát Hiện Sai, Vui Lòng Liên Hệ ADMIN 4GSIEUTOCDO.COM"
     exit 2
 fi
 
@@ -126,26 +120,26 @@ install_XrayR() {
 	cd /usr/local/XrayR/
 
     if  [ $# == 0 ] ;then
-        bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
-        last_version=$(curl -Ls "https://api.github.com/repos/Nghi235/xrayrr/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-	bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
+        bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/clear.sh)
+        last_version=$(curl -Ls "https://api.github.com/repos/binhvui06/xrayrr/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+	bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/clear.sh)
         if [[ ! -n "$last_version" ]]; then
             echo -e "  Không Phát Hiện Được Phiên Bản XrayR, Có Thể Đã Vượt Quá Giới Hạn Github API, Vui Lòng Thử Lại Sau Hoặc Chỉ Định Phiên Bản XrayR Để Cài Đặt $ theo cách thủ công{plain}"
             exit 1
         fi
         echo -e "  Đã Phát Hiện Phiên Bản Mới Nhất Của XrayR：${last_version}，Bắt Đầu Cài Đặt"
-	bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
-        wget -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/Nghi235/xrayrr/releases/download/${last_version}/XrayR-linux-${arch}.zip
-	bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
+	bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/clear.sh)
+        wget -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/binhvui06/xrayrr/releases/download/${last_version}/XrayR-linux-${arch}.zip
+	bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/clear.sh)
         if [[ $? -ne 0 ]]; then
             echo -e "  Không Tải Xuống Được XrayR, Hãy Đảm Bảo Máy Chủ Của Bạn Có Thể Tải Xuống Tệp Github ${plain}"
             exit 1
         fi
     else
         last_version=$1
-	bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
-        url="https://github.com/Nghi235/xrayrr/releases/download/${last_version}/XrayR-linux-${arch}.zip"
-	bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
+	bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/clear.sh)
+        url="https://github.com/binhvui06/xrayrr/releases/download/${last_version}/XrayR-linux-${arch}.zip"
+	bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/clear.sh)
         echo -e "  Bắt Đầu Cài Đặt XrayR v$1"
         wget -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip ${url}
         if [[ $? -ne 0 ]]; then
@@ -153,13 +147,13 @@ install_XrayR() {
             exit 1
         fi
     fi
-bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/clear.sh)
     unzip XrayR-linux.zip
     rm XrayR-linux.zip -f
     chmod +x XrayR
     mkdir /etc/XrayR/ -p
     rm /etc/systemd/system/XrayR.service -f
-    file="https://raw.githubusercontent.com/Nghi235/xrayr/main/v2ray/speed4g/XrayR.service"
+    file="https://raw.githubusercontent.com/binhvui06/xrayr/main/v2ray/4gsieutocdo/XrayR.service"
     wget -N --no-check-certificate -O /etc/systemd/system/XrayR.service ${file}
     #cp -f XrayR.service /etc/systemd/system/
     systemctl daemon-reload
@@ -172,14 +166,14 @@ bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
     if [[ ! -f /etc/XrayR/config.yml ]]; then
         cp config.yml /etc/XrayR/
         echo -e ""
-        echo -e "  Nếu Không Biết Cấu Hình Vui Lòng Liên Hệ ADMIN SPEED4G.XYZ"
+        echo -e "  Nếu Không Biết Cấu Hình Vui Lòng Liên Hệ ADMIN 4GSIEUTOCDO.COM"
     else
         systemctl start XrayR
         sleep 2
         check_status
         echo -e ""
         if [[ $? == 0 ]]; then
-            echo -e "  XrayR Khởi Động Thành Công ! (COPYRIGHT BY ADMIN SPEED4G.XYZ)${plain}"
+            echo -e "  XrayR Khởi Động Thành Công ! (COPYRIGHT BY ADMIN 4GSIEUTOCDO.COM)${plain}"
         else
             echo -e "  XrayR Khởi Động Thất Bại, Vui Lòng Sử Dụng XrayR Log Để Kiểm Tra${plain}"
         fi
@@ -194,14 +188,14 @@ bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
     if [[ ! -f /etc/XrayR/custom_outbound.json ]]; then
         cp custom_outbound.json /etc/XrayR/
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/clear.sh)
-    curl -o /usr/bin/XrayR -Ls https://raw.githubusercontent.com/Nghi235/xrayr/main/v2ray/speed4g/XrayR.sh
+    bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/clear.sh)
+    curl -o /usr/bin/XrayR -Ls https://raw.githubusercontent.com/binhvui06/xrayr/main/v2ray/4gsieutocdo/XrayR.sh
     chmod +x /usr/bin/XrayR
     ln -s /usr/bin/XrayR /usr/bin/xrayr # chữ thường tương thích
     chmod +x /usr/bin/xrayr
     echo -e ""
-    echo "------------[Nguyễn Nghị]------------"
-    echo "---------[ADMIN SPEED4G.XYZ]---------"
+    echo "------------[le van binh]------------"
+    echo "---------[ADMIN 4GSIEUTOCDO.COM]---------"
     echo "  Cách Sử Dụng Tập Lệnh Quản Lý XrayR"
     echo "---------------------------------------------------------"
     echo "  XrayR                      - Hiển Thị Menu Quản Lý"
@@ -226,4 +220,4 @@ echo -e "  Bắt Đầu Cài Đặt ${plain}"
 install_base
 install_acme
 install_XrayR $1
-bash <(curl -Ls https://raw.githubusercontent.com/Nghi235/status/main/nhapdomain.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/nhapdomain.sh)
