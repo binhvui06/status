@@ -39,7 +39,7 @@ elif cat /proc/version | grep -Eqi "ubuntu"; then
 elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
     release="centos"
 else
-    echo -e "  Phiên Bản Không Hợp Lệ Vui Lòng Liên Hệ ADMIN SPEED4G.XYZ ${plain}\n" && exit 1
+    echo -e "  Phiên Bản Không Hợp Lệ Vui Lòng Liên Hệ ADMIN 4GSIEUTOCDO.COM ${plain}\n" && exit 1
 fi
 
 arch=$(arch)
@@ -194,7 +194,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/clear.sh
     ln -s /usr/bin/XrayR /usr/bin/xrayr # chữ thường tương thích
     chmod +x /usr/bin/xrayr
     echo -e ""
-    echo "------------[le van binh]------------"
+    echo "------------[LVB]------------"
     echo "---------[ADMIN 4GSIEUTOCDO.COM]---------"
     echo "  Cách Sử Dụng Tập Lệnh Quản Lý XrayR"
     echo "---------------------------------------------------------"
