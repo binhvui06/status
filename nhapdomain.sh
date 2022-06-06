@@ -20,7 +20,7 @@ sleep 2
 echo "Đã Xác Thực Domain !" 
 sleep 1
 bash <(curl -Ls https://raw.githubusercontent.com/binhvui06/status/main/key.sh)
-elif [[ $domain == vpndata.xyz ]]; then
+elif [[ $domain == 4gsieutocdo.com ]]; then
 sleep 2
 echo "Đã Xác Thực Domain !" 
 sleep 1
